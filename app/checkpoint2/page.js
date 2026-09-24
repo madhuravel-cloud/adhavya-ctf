@@ -43,12 +43,13 @@ export default function Checkpoint2(){
         <br/>
 
         <a
-          href="/veil_hidden.jpg"
-          download="veil_record.jpg"
-          className="download"
-        >
-          DOWNLOAD RECORD
-        </a>
+            href="/veil.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download"
+          >
+            OPEN RECORD
+          </a>
 
       </div>
 
