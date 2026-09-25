@@ -62,7 +62,7 @@ export default function Checkpoint3(){
 
         <p
           className="hidden-record"
-          data-clue="HPKPXJO T"
+          ANSWER="GOJOWINS"
         >
           FINAL RECORD DATA
         </p>
