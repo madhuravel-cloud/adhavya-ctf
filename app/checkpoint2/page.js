@@ -10,6 +10,8 @@ export default function Checkpoint2(){
   function submit(){
     if(answer.trim().toUpperCase()==="NOBARA HELP"){
       router.push("/checkpoint3")
+    }else{
+      alert("Wrong answer. Try again.")
     }
   }
 
@@ -26,7 +28,6 @@ export default function Checkpoint2(){
         <div className="line"></div>
 
         <p>The battle left almost nothing behind.</p>
-
         <p>I found this image inside the damaged record.</p>
 
       </div>
@@ -34,7 +35,7 @@ export default function Checkpoint2(){
       <div className="transmission">
 
         <img
-          src="/veil_hidden.jpg"
+          src="/veil.jpg"
           alt="Damaged Veil Record"
           className="record-image"
         />
@@ -43,13 +44,13 @@ export default function Checkpoint2(){
         <br/>
 
         <a
-            href="/veil.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="download"
-          >
-            OPEN RECORD
-          </a>
+          href="/veil.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="download"
+        >
+          OPEN RECORD
+        </a>
 
       </div>
 

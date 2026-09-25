@@ -3,82 +3,88 @@
 import {useState} from "react"
 
 export default function Checkpoint3(){
-const [answer,setAnswer]=useState("")
-const [passed,setPassed]=useState(false)
+  const [answer,setAnswer]=useState("")
+  const [passed,setPassed]=useState(false)
 
-function submit(){
-if(answer.trim().toUpperCase()==="GOJOWINS"){
-setPassed(true)
-}
-}
+  function submit(){
+    if(answer.trim().toUpperCase()==="GOJOWINS"){
+      setPassed(true)
+    }else{
+      alert("Wrong answer. Try again.")
+    }
+  }
 
-if(passed){
-return(
-<main>
-<h1>THE VEIL HAS FALLEN</h1>
+  if(passed){
+    return(
+      <main className="container">
 
-<div className="terminal">
-<p>GOJOWINS.</p>
+        <h1>THE VEIL HAS FALLEN</h1>
 
-<div className="line"></div>
+        <div className="terminal">
 
-<p>So you finally reached the end.</p>
-<p>The barrier has fallen.</p>
-<p>You survived Sukuna's Domain.</p>
+          <p>GOJOWINS.</p>
 
-<p className="success">PASS.</p>
-</div>
+          <div className="line"></div>
 
-</main>
-)
-}
+          <p>So you finally reached the end.</p>
+          <p>The barrier has fallen.</p>
+          <p>You survived Sukuna's Domain.</p>
 
-return(
-<main>
+          <p className="success">PASS.</p>
 
-<h1>FINAL RECORD</h1>
+        </div>
 
-<div className="terminal">
-<p>YUJI ITADORI</p>
-<p>FINAL TRANSMISSION</p>
+      </main>
+    )
+  }
 
-<div className="line"></div>
+  return(
+    <main className="container">
 
-<p>The battle is over.</p>
-<p>Something was left behind.</p>
-<p>Not everything written here was meant to be seen.</p>
-</div>
+      <h1>FINAL RECORD</h1>
 
-<div
-className="final-record"
-data-final-secret="HPKPXJO"
-data-cipher="CAESAR"
->
+      <div className="terminal">
 
-<p>RECORD STATUS: CORRUPTED</p>
+        <p>YUJI ITADORI</p>
+        <p>FINAL TRANSMISSION</p>
 
-<p>FINAL RECORD DATA</p>
+        <div className="line"></div>
 
-</div>
+        <p>The battle is over.</p>
+        <p>Something was left behind.</p>
+        <p>Not everything written here was meant to be seen.</p>
 
-<div className="hint">
+      </div>
 
-<p>The record has one final secret.</p>
-<p>Some things reveal themselves only when you look closer.</p>
-<p>The old rule may still remember the way.</p>
+      <div className="final-record">
 
-</div>
+        <p>RECORD STATUS: CORRUPTED</p>
 
-<input
-value={answer}
-onChange={(e)=>setAnswer(e.target.value)}
-placeholder="Enter final answer"
-/>
+        <p
+          className="hidden-record"
+          data-clue="HPKPXJO T"
+        >
+          FINAL RECORD DATA
+        </p>
 
-<button onClick={submit}>
-SUBMIT
-</button>
+      </div>
 
-</main>
-)
+      <div className="hint">
+
+        <p>The record has one final secret.</p>
+        <p>Some things reveal themselves only when you look closer.</p>
+        <p>The old rule may still remember the way.</p>
+
+      </div>
+
+      <input
+        value={answer}
+        onChange={(e)=>setAnswer(e.target.value)}
+        placeholder="Enter final answer"
+      />
+
+      <button onClick={submit}>SUBMIT</button>
+
+    </main>
+  )
 }

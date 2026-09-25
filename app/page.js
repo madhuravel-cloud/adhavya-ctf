@@ -10,6 +10,8 @@ export default function Home(){
   function submit(){
     if(answer.trim().toUpperCase()==="THE KING IS WAITING"){
       router.push("/checkpoint1")
+    }else{
+      alert("Wrong answer. Try again.")
     }
   }
 
